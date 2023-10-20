@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	double r;
+	double pai = 3.1415926;
+	double s;
+	double c;
+	printf("输入圆的半径：\n");
+	scanf_s("%lf", &r);
+	printf("圆的面积：%lf\n", s = pai * r *r);
+	printf("圆的周长：%lf", c = 2 * pai * r);
+	
+
+	return 0;
+}
