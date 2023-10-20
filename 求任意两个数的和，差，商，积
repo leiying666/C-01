@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	double a;
+	double b;
+	double c;
+	double d;
+	double e;
+	double f;
+	double g;
+	double h;
+
+	printf("输入要运算加法的数字：\n");
+	scanf_s("%lf %lf", &a, &b);
+	printf("a+b=%lf\n", a + b);
+	printf("输入要运算减法的数字：\n");
+	scanf_s("%lf %lf", &c, &d);
+	printf("c-d=%lf\n", c-d);
+	printf("输入要运算除法的数字：\n");
+	scanf_s("%lf %lf", &e, &f);
+	printf("e/f=%lf\n", e/f);
+	printf("输入要运算乘法的数字：\n");
+	scanf_s("%lf %lf", &g, &h);
+	printf("g*h=%lf\n", g*h);
+
+
+
+
+
+
+
+
+	return 0;
+}
