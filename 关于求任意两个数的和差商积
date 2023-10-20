@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	double a;
+	double b;
+	printf("输入要运算的数字：");
+	scanf_s("%lf %lf", &a, &b);
+	printf("a+b=%lf\na-b=%lf\na/b=%lf\na*b=%lf", a + b, a - b, a / b, a * b);
+	
+	
+
+	
+
+	return 0;
