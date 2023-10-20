@@ -1,0 +1,83 @@
+1.使用代码块（如果满足if的条件且要执行多条语句，则要使用代码块）
+#include <stdio.h>
+int main()
+{if(表达式);
+ {语句列表1;
+}
+else
+{
+语句列表2;
+}
+return 0;
+}
+其中在if下面的{}即为代码块。
+
+2.悬空else
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 1;
+	if(a == 1)
+	  if (b == 2)
+	printf("hehe\n");
+	  else
+		printf("haha\n");
+	return 0;
+}
+输出结果：无
+原因:这里的else是与if（b==2）配对的（就近原则：else先匹配与它离得近的且能匹配的if相匹配），先判断a是否等于1，是，再判断
+if (b == 2)
+	printf("hehe\n");
+	  else
+		printf("haha\n");
+不是，无输出
+如果为下面的形式,因为if（b==2）为局域条件，则else与if（a==1）匹配
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 1;
+	if(a == 1)
+	  {if (b == 2)
+	printf("hehe\n");
+    }
+	  else
+		printf("haha\n");
+	return 0;
+}
+
+注意：判断相等应用==!!!
+
+3.隐形else
+代码1：
+{if(条件1)
+  {
+   return x;
+  }
+return y;
+}
+
+代码2:
+{if(条件1)
+  {
+   return x;
+  }
+else
+  {
+   return y;
+  }
+ return 0;
+}
+
+代码1与代码2都满足如果条件1成立，输出x，如果不成立，输出y。
+原理：代码在return结束！！！
+
+
+
+
+
+
+
+
+
